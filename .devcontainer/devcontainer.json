@@ -8,6 +8,5 @@
     // 運行主腳本：可加入參數
     // --server.enableCORS false：允許應用接受來自不同埠或域的請求
     // --server.enableXsrfProtection false：禁用保護，在開發階段使用以避免遇到與 CSRF 保護相關的問題
-    "postAttachCommand": "streamlit run bot.py",
-
+    "postAttachCommand": "streamlit run bot.py"
 }
