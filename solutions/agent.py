@@ -7,10 +7,10 @@ from solutions.llm import llm
 from solutions.tools.vector import kg_qa
 from solutions.tools.finetuned import cypher_qa
 # 導入 logging
-import logging
+# import logging
 
 # 設置日誌記錄
-logging.basicConfig(level=logging.DEBUG)
+# logging.basicConfig(level=logging.DEBUG)
 
 # 在工具陣列中添加 kg_qa
 tools = [
@@ -69,14 +69,14 @@ agent_executor = AgentExecutor(
 # 修正的腳本
 def generate_response(prompt):
     # 日誌
-    logging.debug(f'Prompt: {prompt}')
+    # logging.debug(f'Prompt: {prompt}')
     print(f'=> generate_response 函數輸出 prompt -> {prompt}')
     try:
         print('=> generate_response 函數進入 try')
         # 回應
         response = agent_executor.invoke({"input": prompt})
         # 日誌
-        logging.debug(f'Response: {response}')
+        # logging.debug(f'Response: {response}')
         print(f'=> response -> {response}')
         # 獲取回應中的 'output' 字段，如果不存在則為 None
         output = response.get('output', None)
@@ -100,15 +100,10 @@ def generate_response(prompt):
     except Exception as e:
         print('=> generate_response 無法解析 -> 回應發生錯誤=')
         # 日誌
-        logging.error(f'Error parsing response: {e}')
+        # logging.error(f'Error parsing response: {e}')
         return f"=> 錯誤的 response -> {str(e)}"
     finally:
         pass
-
-# 保留官方原始代碼作為參考
-# def generate_response(prompt):
-#     response = agent_executor.invoke({"input": prompt})
-#     return response["output"]
 
 
 # 加入測試代碼

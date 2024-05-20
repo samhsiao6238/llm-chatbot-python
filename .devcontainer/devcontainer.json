@@ -9,12 +9,5 @@
     // --server.enableCORS false：允許應用接受來自不同埠或域的請求
     // --server.enableXsrfProtection false：禁用保護，在開發階段使用以避免遇到與 CSRF 保護相關的問題
     "postAttachCommand": "streamlit run bot.py",
-       // 加入環境變數
-    // "remoteEnv": {
-    //     "OPENAI_API_KEY": "${{ secrets.OPENAI_API_KEY }}",
-    //     "NEO4J_URI": "${{ secrets.NEO4J_URI }}",
-    //     "NEO4J_USERNAME": "${{ secrets.NEO4J_USERNAME }}",
-    //     "NEO4J_PASSWORD": "${{ secrets.NEO4J_PASSWORD }}",
-    //     "OPENAI_MODEL": "${{ secrets.OPENAI_MODEL }}"
-    // }
+
 }

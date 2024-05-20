@@ -6,8 +6,6 @@ from langchain_openai import ChatOpenAI
 llm = ChatOpenAI(
     openai_api_key=st.secrets["OPENAI_API_KEY"],
     model=st.secrets["OPENAI_MODEL"],
-    # openai_api_key=os.getenv("OPENAI_API_KEY"),
-    # model=os.getenv("OPENAI_MODEL"),
 )
 from langchain_openai import OpenAIEmbeddings
 
@@ -15,5 +13,4 @@ from langchain_openai import OpenAIEmbeddings
 # 這些嵌入向量是從使用 OpenAI 模型（如 GPT-4）生成的文本中獲取的
 embeddings = OpenAIEmbeddings(
     openai_api_key=st.secrets["OPENAI_API_KEY"]
-    # openai_api_key=os.getenv("OPENAI_API_KEY")
 )

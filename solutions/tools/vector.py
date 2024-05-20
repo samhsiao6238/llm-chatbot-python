@@ -3,7 +3,6 @@ from langchain_community.vectorstores.neo4j_vector import Neo4jVector
 # from langchain.chains.qa_with_sources import load_qa_with_sources_chain
 from langchain.chains import RetrievalQA
 from solutions.llm import llm, embeddings
-# import os
 
 # 使用 Neo4jVector.from_existing_index 方法創建一個 Neo4jVector
 neo4jvector = Neo4jVector.from_existing_index(
@@ -13,9 +12,6 @@ neo4jvector = Neo4jVector.from_existing_index(
     url=st.secrets["NEO4J_URI"],
     username=st.secrets["NEO4J_USERNAME"],
     password=st.secrets["NEO4J_PASSWORD"],
-    # url=os.getenv("NEO4J_URI"),
-    # username=os.getenv("NEO4J_USERNAME"),
-    # password=os.getenv("NEO4J_PASSWORD"),        
     # 索引名稱
     index_name="moviePlots",
     # 用於填充索引的節點標籤
