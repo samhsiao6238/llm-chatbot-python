@@ -1,0 +1,10 @@
+{
+    // flake8 長度
+    "flake8.args": [
+        // 設定最大長度
+        "--max-line-length=200",
+        // 取消首行必須是 import 的規定
+        // 取消長度限制
+        "--ignore=E402, E501"
+    ],
+}
